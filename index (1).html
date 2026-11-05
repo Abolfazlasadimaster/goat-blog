@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>وبلاگ پرورش بز</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1ec;--surface:#fbfcfa;--ink:#1f2a24;--muted:#5b6a60;--green:#2f5d3a;--hay:#b88a1e;--line:#d3dacf;--hero:#2f5d3a;--herotext:#f4f7f1;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141b16;--surface:#1c261f;--ink:#e8eee6;--muted:#9fb0a4;--green:#8fc79c;--hay:#e0b84e;--line:#2c3a30;--hero:#1f3a27;--herotext:#e8eee6}}
+:root[data-theme="dark"]{--bg:#141b16;--surface:#1c261f;--ink:#e8eee6;--muted:#9fb0a4;--green:#8fc79c;--hay:#e0b84e;--line:#2c3a30;--hero:#1f3a27;--herotext:#e8eee6}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:2;font-size:17px}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header.top{background:var(--hero);color:var(--herotext);padding:44px 0 36px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand svg{width:64px;height:64px;flex:none}
+.brand b{font-size:2.1rem;font-weight:800;line-height:1.3}
+.tag{margin:14px 0 0;max-width:34em;opacity:.9}
+nav.cats{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0}
+nav.cats button{font:inherit;font-size:.9rem;border:1px solid rgba(255,255,255,.35);background:transparent;color:var(--herotext);padding:2px 14px;border-radius:99px;cursor:pointer}
+nav.cats button[aria-pressed="true"]{background:var(--hay);border-color:var(--hay);color:#1b1608}
+button:focus-visible,a:focus-visible{outline:3px solid var(--hay);outline-offset:2px}
+main{padding:34px 0 20px}
+.post-item{display:block;text-decoration:none;padding:22px 0;border-bottom:1px solid var(--line)}
+.post-item:first-child{padding-top:0}
+.post-item h2{margin:0 0 4px;font-size:1.35rem;line-height:1.7;color:var(--green)}
+.post-item:hover h2{text-decoration:underline}
+.post-item p{margin:0;color:var(--muted);font-size:.97rem}
+.meta{font-size:.85rem;color:var(--muted);margin-bottom:2px}
+article h1{font-size:2rem;line-height:1.6;margin:0 0 6px;color:var(--green)}
+article h2{font-size:1.2rem;margin:28px 0 0;color:var(--green)}
+article p{margin:10px 0}
+article ul{padding-inline-start:22px;margin:10px 0}
+article li{margin:4px 0}
+.back{display:inline-block;margin-bottom:18px;color:var(--green);font-weight:500;text-decoration:none}
+.back:hover{text-decoration:underline}
+.box{background:var(--surface);border:1px solid var(--line);border-inline-start:5px solid var(--hay);padding:12px 18px;margin:18px 0;border-radius:6px}
+.tbl{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;min-width:480px;background:var(--surface);font-size:.95rem;line-height:1.8}
+th,td{border:1px solid var(--line);padding:6px 12px;text-align:right}
+th{background:var(--hero);color:var(--herotext);font-weight:500}
+footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--muted);font-size:.9rem}
+.tg{float:left;font:inherit;font-size:.85rem;background:none;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:0 12px;cursor:pointer}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:18px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:0 0 12px;overflow:hidden}
+.card h3{margin:10px 14px 0;font-size:1.1rem;color:var(--green);line-height:1.6}
+.card .meta{margin:0 14px}
+.card p{margin:6px 14px 0;font-size:.93rem;line-height:1.9}
+figure{margin:0}
+figure img{display:block;width:100%;height:170px;object-fit:cover}
+figcaption{font-size:.78rem;color:var(--muted);padding:2px 14px;direction:ltr;text-align:left}
+figure.noimg img{display:none}
+figure.noimg::before{content:attr(data-name);display:flex;align-items:center;justify-content:center;height:170px;background:var(--hero);color:var(--herotext);font-weight:500}
+ol.refs{direction:ltr;text-align:left;padding-inline-start:26px;font-size:.92rem;line-height:1.8}
+ol.refs li{margin:8px 0}
+sup{font-size:.7em;color:var(--hay);font-weight:800}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="#home" aria-label="صفحهٔ اصلی">
+<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#f4f7f1"/><path d="M18 8c-6 6-6 16-2 22M46 8c6 6 6 16 2 22" stroke="#b88a1e" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="32" cy="36" rx="14" ry="16" fill="#e4dccb"/><circle cx="26" cy="32" r="2.4" fill="#1f2a24"/><circle cx="38" cy="32" r="2.4" fill="#1f2a24"/><ellipse cx="32" cy="43" rx="6" ry="4" fill="#cdbf9f"/><path d="M32 46v9" stroke="#e4dccb" stroke-width="3" stroke-linecap="round"/></svg>
+<b>وبلاگ پرورش بز</b></a>
+<p class="tag">مطالب علمی دربارهٔ پرورش بز: نژادهای داخلی و خارجی، پروار بندی، تغذیه، تولیدمثل، بهداشت و اقتصاد، همراه با منابع.</p>
+<nav class="cats" id="cats" aria-label="دسته‌بندی"></nav>
+</div></header>
+<main><div class="wrap" id="view"></div></main>
+<footer><div class="wrap"><button class="tg" id="tg" type="button">حالت تیره/روشن</button>نویسنده: ابوالفضل اسدی · دانشگاه علوم کشاورزی و منابع طبیعی ساری · استاد: دکتر علیرضا جعفری صیادی</div></footer>
+
+<script>
+function B(f,n,en,o,t){return "<div class='card'><figure data-name='"+n+"'><img src='img/"+f+".jpg' alt='"+n+"' loading='lazy'><figcaption>"+en+"</figcaption></figure><h3>"+n+"</h3><div class='meta'>"+o+"</div><p>"+t+"</p></div>"}
+document.addEventListener("error",function(e){if(e.target&&e.target.tagName==="IMG"){e.target.parentNode.className="noimg"}},true);
+var P=[
+{id:"intro",cat:"مقدمه",t:"چرا پرورش بز؟",d:"آبان ۱۴۰۵",s:"نگاهی کلی به جایگاه بز در دامداری و دلایل توجه به آن.",h:
+"<p>بز یکی از قدیمی‌ترین دام‌های اهلی است<sup>1,2</sup> و به دلیل سازگاری بالا با شرایط سخت، در بسیاری از مناطق کشور از جمله مناطق کوهستانی و نیمه‌خشک پرورش داده می‌شود<sup>3</sup>. بز می‌تواند از انواع بوته‌ها و گیاهان مرتعی استفاده کند و به همین دلیل برای مناطقی که علوفهٔ مرغوب کمتری دارند مناسب است.</p><h2>محصولات اصلی</h2><ul><li><b>شیر:</b> مصرف مستقیم و تولید پنیر و ماست.</li><li><b>گوشت:</b> به‌ویژه از بزغاله‌ها و بزهای نژادهای گوشتی.</li><li><b>مو و پشم:</b> مانند مرخز که الیاف ارزشمندی تولید می‌کند.</li><li><b>کود:</b> کود دامی برای کشاورزی.</li></ul><div class='box'>در این وبلاگ، موضوع‌ها را گام‌به‌گام مرور می‌کنیم: نژادها، آغل، تغذیه، تولیدمثل، بهداشت و اقتصاد.</div>"},
+
+{id:"domestic",cat:"نژادها",t:"نژادهای بومی بز ایران",d:"آبان ۱۴۰۵",s:"مرخز، رائینی، نایینی و لری: پراکنش، کاربری و ویژگی‌ها.",h:
+`<p>ایران به‌دلیل تنوع اقلیمی، دارای جمعیت‌های متنوعی از بز است. نژادهای بومی طی قرن‌ها با شرایط محلی (گرما، خشکی، مراتع فقیر و کوهستان) سازگار شده‌اند و از نظر مقاومت به تنش و بیماری‌ها اهمیت ژنتیکی بالایی دارند<sup>3,9</sup>. هرچند تولید فردی آن‌ها معمولاً از نژادهای اصلاح‌شدهٔ شیری یا گوشتی کمتر است، اما به‌عنوان منبع ژنی برای برنامه‌های اصلاح نژاد و تلاقی ارزشمندند.</p>
+<div class='cards'>`+
+B("markhoz","بز مرخز","Markhoz goat","غرب ایران (کردستان و کرمانشاه)","از معدود نژادهای بومی ایران با الیاف بلند و ظریف شبیه موهر. کاربری اصلی: تولید الیاف و گوشت. رنگ‌های سیاه، قهوه‌ای و سفید در آن دیده می‌شود.")+
+B("raeini","بز رائینی","Raeini cashmere goat","کرمان (منطقهٔ رایین)","سازگار با شرایط گرم و خشک. از این نژاد کرک (کشمیر) به‌دست می‌آید و علاوه بر آن برای تولید گوشت نیز پرورش می‌یابد.")+
+B("naeini","بز نایینی","Naeini goat","مناطق مرکزی ایران","سازگار با اقلیم خشک و مراتع کم‌علوفه؛ کاربری عمدتاً گوشت و فراورده‌های جانبی.")+
+B("lori","بز لری","Lori goat","زاگرس (لرستان و مناطق همجوار)","مناسب شرایط کوهستانی و مرتع‌چرانی. از نظر مقاومت به شرایط دشوار و تولید گوشت و شیر در نظام‌های عشایری و روستایی اهمیت دارد.")+
+`</div>
+<div class='box'>ویژگی‌های دقیق عددی نژادها (وزن، تولید شیر و الیاف) در منابع متفاوت است. برای ارائهٔ رسمی، اطلاعات را از سامانهٔ DAD-IS فائو<sup>10</sup> و گزارش‌های مؤسسهٔ تحقیقات علوم دامی کشور تکمیل کنید. بزهای بومی دیگری نیز در ایران وجود دارد که در اینجا فقط نمونه‌های شاخص آمده است.</div>`},
+{id:"foreign",cat:"نژادها",t:"نژادهای مهم خارجی بز",d:"آبان ۱۴۰۵",s:"سانن، آلپاین، توگنبورگ، نوبین، بوئر و آنگورا.",h:
+`<p>نژادهای خارجی مهم معمولاً بر اساس هدف تولید طبقه‌بندی می‌شوند: شیری (سانن، آلپاین، توگنبورگ)، گوشتی (بوئر، نوبین تا حدی) و الیافی (آنگورا). تولید بالاتر این نژادها معمولاً با نیاز به مدیریت و تغذیهٔ دقیق‌تر همراه است<sup>1,5</sup>، و همین سبب می‌شود در شرایط سخت اقلیمی تلاقی با نژادهای بومی رایج باشد<sup>9</sup>.</p>
+<div class='cards'>`+
+B("saanen","سانن","Saanen","سوئیس (دره سانن)","سفیدرنگ و پرشیرترین نژاد شناخته‌شده. به‌دلیل رنگ روشن به آفتاب‌سوختگی و گرمای شدید حساس است<sup>4</sup>.")+
+B("alpine","آلپاین","Alpine","فرانسه و سوئیس (کوه‌های آلپ)","نژاد شیری با رنگ‌های متنوع و سازگاری نسبتاً خوب با اقلیم‌های مختلف.")+
+B("toggenburg","توگنبورگ","Toggenburg","سوئیس (دره توگنبورگ)","قهوه‌ای با نشانه‌های سفید روی صورت و پا. از قدیمی‌ترین نژادهای شیری و مقاوم به هوای سرد.")+
+B("nubian","نوبین (انگلو-نوبین)","Nubian / Anglo-Nubian","انگلستان (تلاقی با بزهای آفریقایی و هندی)","گوش‌های بلند آویزان و بینی خمیده. شیر آن چربی بالایی دارد و به گرما مقاوم‌تر است؛ کاربری دوگانه (شیر و گوشت).")+
+B("boer","بوئر","Boer","آفریقای جنوبی","مهم‌ترین نژاد گوشتی جهان، با رشد سریع و بدنهٔ عضلانی؛ بدن سفید و سر قهوه‌ای. در تلاقی با بزهای بومی برای بهبود پروار کاربرد فراوان دارد<sup>8</sup>.")+
+B("angora","آنگورا","Angora","ترکیه (آنکارا)","تولیدکنندهٔ الیاف موهر؛ جثهٔ کوچک و موهای بلند سفید فرفری.")+
+`</div>`},
+{id:"fattening",cat:"پروار",t:"پروار بندی بز: انواع، جیره و مدیریت",d:"آبان ۱۴۰۵",s:"انواع پروار بندی، انتخاب دام، جیره، مدیریت سلامت و شاخص‌های اقتصادی.",h:
+`<h2>تعریف و اهمیت</h2>
+<p>پروار بندی به معنی نگهداری و تغذیهٔ دام با جیرهٔ پرانرژی در دوره‌ای کوتاه، به‌منظور افزایش سریع وزن و بهبود کیفیت لاشه پیش از کشتار است. در بز، گوشت معمولاً چربی کمتری نسبت به گوسفند دارد و چربی بیشتر در اطراف احشا ذخیره می‌شود<sup>7</sup>. پروار بزغاله‌ها از بیشترین رشد روزانه و بهترین ضریب تبدیل خوراک در سنین پایین بهره می‌برد و بنابراین رایج‌ترین شکل پروار است.</p>
+<h2>انواع پروار بندی</h2>
+<p>پروار بز را می‌توان از دو نظر دسته‌بندی کرد: بر اساس نظام پرورش و بر اساس نوع دام.</p>
+<div class='tbl'><table><tr><th>طبقه‌بندی</th><th>نوع</th><th>توضیح</th></tr>
+<tr><td rowspan='3'>نظام پرورش</td><td>مرتعی (گسترده)</td><td>اتکا به چرا؛ هزینهٔ کم اما رشد کندتر و وابسته به فصل و کیفیت مرتع</td></tr>
+<tr><td>نیمه‌متراکم</td><td>چرای محدود به‌همراه خوراک‌دهی تکمیلی در آغل؛ تعادل میان هزینه و رشد</td></tr>
+<tr><td>متراکم (آغلی)</td><td>تمام خوراک در آغل؛ بیشترین رشد و کنترل، با هزینهٔ خوراک و نیاز به مدیریت بالاتر</td></tr>
+<tr><td rowspan='4'>نوع دام</td><td>بزغالهٔ از شیر گرفته‌شده</td><td>پس از از شیرگیری (حدود ۳ ماهگی)؛ رایج‌ترین و کارآمدترین گروه</td></tr>
+<tr><td>بزغالهٔ شیرخوار</td><td>تغذیه با شیر برای تولید گوشت بزغالهٔ جوان و لطیف، در زمان کوتاه</td></tr>
+<tr><td>بز نر اخته</td><td>برای کنترل رفتار جنسی و بهبود کیفیت گوشت، به‌ویژه در دام‌های بالغ‌تر</td></tr>
+<tr><td>دام حذفی</td><td>بزهای مسن یا ماده‌های حذفی؛ پروار کوتاه برای بهبود وضعیت بدنی پیش از فروش</td></tr></table></div>
+<h2>انتخاب دام</h2>
+<ul><li>دام سالم، با اندام متناسب و بدون نشانهٔ بیماری یا انگل.</li><li>سن شروع پروار بزغاله معمولاً ۳ تا ۶ ماهگی است.</li><li>نژاد و تلاقی: دورگ‌های بوئر × بومی معمولاً رشد بهتری از نژادهای بومی خالص دارند<sup>8,9</sup>.</li><li>یکنواختی گروه از نظر وزن و سن برای جلوگیری از رقابت بر سر خوراک اهمیت دارد.</li></ul>
+<h2>مراحل اجرای پروار</h2>
+<ol><li><b>ورود و قرنطینه:</b> جداسازی، شمارش، وزن‌کشی، واکسیناسیون و دفع انگل.</li><li><b>دورهٔ عادت‌دهی (حدود ۲ تا ۳ هفته):</b> افزایش تدریجی کنسانتره به‌منظور سازگار شدن شکمبه.</li><li><b>دورهٔ پروار اصلی:</b> تغذیهٔ پرانرژی؛ معمولاً حدود ۹۰ تا ۱۲۰ روز، بسته به وزن اولیه و هدف.</li><li><b>فروش:</b> در وزن و درجهٔ چاقی مطلوب بازار، پیش از آنکه رشد کند و هزینه بیشتر شود.</li></ol>
+<h2>جیرهٔ پروار</h2>
+<p>جیرهٔ پروار شامل مقدار قابل‌توجهی کنسانتره (جو، ذرت، سبوس، کنجاله) و بخشی علوفه (یونجه، کاه، علوفهٔ خشک) است. به‌طور تقریبی، پروتئین خام جیره برای بزغالهٔ در حال رشد در حدود ۱۴ تا ۱۶ درصد ماده خشک و سهم کنسانتره در نظام‌های متراکم در حدود ۵۰ تا ۷۰ درصد است. این اعداد تقریبی‌اند و برای محاسبهٔ دقیق باید از جداول نیازهای غذایی<sup>6</sup> و مرور تغذیهٔ بز<sup>5</sup> استفاده کرد.</p>
+<ul><li>حداقل علوفهٔ مؤثر برای حفظ سلامت شکمبه الزامی است.</li><li>افزودن بافر (مثل بی‌کربنات سدیم) در جیره‌های پرکنسانتره می‌تواند به پیشگیری از اسیدوز کمک کند.</li><li>آب تمیز و فراوان باید همیشه در دسترس باشد.</li><li>مکمل مواد معدنی و ویتامین‌ها بر اساس جیره تنظیم شود.</li></ul>
+<h2>مدیریت سلامت در پروار</h2>
+<ul><li><b>اسیدوز و آنتروتوکسمی:</b> ناشی از افزایش ناگهانی کنسانتره؛ پیشگیری با عادت‌دهی تدریجی و واکسیناسیون.</li><li><b>سنگ ادراری:</b> در بزهای نر پرواری با جیرهٔ پرکنسانتره شایع است. حفظ نسبت کلسیم به فسفر (حدود ۲ به ۱)، تأمین آب فراوان و در صورت لزوم افزودن کلرید آمونیوم از راه‌های پیشگیری است.</li><li><b>انگل‌ها:</b> برنامهٔ دفع انگل داخلی و خارجی در ابتدای دوره.</li><li><b>تراکم و استرس:</b> ازدحام، رشد را کم و بیماری را زیاد می‌کند.</li></ul>
+<h2>شاخص‌های ارزیابی</h2>
+<ul><li><b>افزایش وزن روزانه (ADG):</b> برحسب گرم در روز؛ در بزغاله‌های پرواری معمولاً چند ده تا چند صد گرم، بسته به نژاد و جیره.</li><li><b>ضریب تبدیل خوراک (FCR):</b> کیلوگرم ماده خشک مصرفی به ازای هر کیلوگرم افزایش وزن؛ هرچه کمتر، بهتر.</li><li><b>درصد لاشه:</b> نسبت وزن لاشه به وزن زنده؛ معمولاً حدود ۴۰ تا ۵۰ درصد، بسته به نژاد، سن و جیره<sup>7</sup>.</li><li><b>هزینهٔ خوراک به‌ازای هر کیلوگرم افزایش وزن:</b> مهم‌ترین عامل سودآوری.</li></ul>
+<div class='box'>برای تکمیل بخش اقتصادی ارائهٔ دانشگاهی، یک نمونهٔ محاسباتی با قیمت‌های روز خوراک و دام (۱۰۰ رأس، ۱۰۰ روز) اضافه کنید و سود و نقطهٔ سربه‌سر را محاسبه کنید.</div>`},
+{id:"housing",cat:"مدیریت",t:"آغل مناسب برای بز",d:"آبان ۱۴۰۵",s:"اصول ساخت و مدیریت آغل: فضا، تهویه، خشکی و ایمنی.",h:
+"<p>آغل باید بز را از باران، باد شدید و گرمای زیاد حفظ کند، اما در عین حال تهویهٔ خوبی داشته باشد. رطوبت و آمونیاک ناشی از ادرار و فضولات، زمینهٔ بیماری‌های تنفسی و سمی را فراهم می‌کند.</p><h2>نکات مهم طراحی</h2><ul><li><b>فضا:</b> ازدحام باعث استرس، جنگ و انتقال بیماری می‌شود. برای هر دام باید فضای کافی در نظر گرفت (معمولاً حدود یک‌ونیم تا دو متر مربع در داخل آغل، بسته به نژاد و سن).</li><li><b>کف:</b> خشک، قابل شست‌وشو و دارای شیب برای خروج آب.</li><li><b>تهویه:</b> جریان هوای ملایم بدون کوران مستقیم روی دام.</li><li><b>جداسازی:</b> بخش جداگانه برای بزغاله‌ها، بزهای آبستن و دام‌های بیمار.</li><li><b>آخور و آبشخور:</b> بلند و تمیز تا خوراک آلوده نشود.</li></ul><div class='box'>بز دام کنجکاو و مهارت‌دار در فرار است؛ حصارها باید محکم باشند و لبه‌های تیز یا میخ بیرون‌زده نداشته باشند.</div>"},
+{id:"feeding",cat:"تغذیه",t:"اصول تغذیهٔ بز",d:"آبان ۱۴۰۵",s:"علوفه، کنسانتره، آب و مکمل‌ها در جیرهٔ بز.",h:
+"<p>بز نشخوارکننده است و پایهٔ جیرهٔ آن باید علوفه (مرتع، یونجه، کاه و ...) باشد. کنسانتره مانند جو و ذرت تنها در مراحل پرنیاز مثل اواخر آبستنی، شیردهی و پروار بزغاله اضافه می‌شود.</p><h2>اصول کلی</h2><ul><li>تغییر جیره باید تدریجی انجام شود تا اختلالات گوارشی پیش نیاید.</li><li>آب تمیز و تازه همیشه در دسترس باشد؛ کمبود آب مصرف خوراک و تولید شیر را کم می‌کند.</li><li>نمک و مکمل‌های معدنی مطابق نیاز و توصیهٔ کارشناس تأمین شود.</li><li>مصرف زیاد کنسانتره خطر اسیدوز و آنتروتوکسمی را بالا می‌برد.</li></ul><p>نیاز غذایی بر اساس وزن، سن، تولید شیر و وضعیت تولیدمثل تغییر می‌کند، بنابراین تنظیم جیره بهتر است با راهنمایی کارشناس تغذیهٔ دام انجام شود.</p>"},
+{id:"breeding",cat:"تولیدمثل",t:"تولیدمثل و پرورش بزغاله",d:"آبان ۱۴۰۵",s:"فصل جفت‌گیری، آبستنی، زایش و مراقبت از بزغاله.",h:
+"<p>بزها در بسیاری از مناطق فعالیت جنسی فصلی دارند و فحلی در اواخر تابستان تا پاییز بیشتر دیده می‌شود. طول دورهٔ آبستنی تقریباً ۱۵۰ روز است (حدود ۱۴۵ تا ۱۵۵ روز).</p><h2>مراحل مهم</h2><ul><li><b>پیش از جفت‌گیری:</b> بهبود تغذیه (فلاشینگ) و بررسی سلامت بز نر و ماده.</li><li><b>آبستنی:</b> تأمین جیرهٔ مناسب، به‌ویژه در ماه‌های پایانی.</li><li><b>زایش:</b> محل تمیز و خشک، و نظارت بر روند زایمان.</li><li><b>آغوز:</b> بزغاله باید در چند ساعت اول زندگی آغوز مصرف کند، زیرا منبع اصلی ایمنی اوست.</li><li><b>از شیر گرفتن:</b> معمولاً در حدود دو تا سه ماهگی، به‌صورت تدریجی.</li></ul><div class='box'>ثبت دقیق تاریخ جفت‌گیری، زایش و وزن بزغاله‌ها کمک می‌کند ضعف‌ها و بهترین دام‌های گله شناسایی شوند.</div>"},
+{id:"health",cat:"بهداشت",t:"بهداشت و بیماری‌های رایج",d:"آبان ۱۴۰۵",s:"پیشگیری، واکسیناسیون و علائم هشداردهندهٔ بیماری.",h:
+"<p>پیشگیری همیشه ارزان‌تر از درمان است. برنامهٔ بهداشتی گله شامل واکسیناسیون، دفع انگل داخلی و خارجی، مراقبت از سم و رعایت بهداشت آغل است.</p><h2>بیماری‌های مهم</h2><ul><li><b>آنتروتوکسمی:</b> ناشی از رشد بی‌رویهٔ باکتری در روده، اغلب پس از تغییر ناگهانی جیره.</li><li><b>تب برفکی و طاعون نشخوارکنندگان کوچک (PPR):</b> بیماری‌های ویروسی واگیر.</li><li><b>تب مالت (بروسلوز):</b> بیماری مشترک بین انسان و دام؛ مصرف شیر خام خطرناک است.</li><li><b>انگل‌های داخلی:</b> یکی از مشکلات رایج و عامل مهم کاهش رشد.</li><li><b>ورم پستان:</b> در بزهای شیری نیازمند رعایت بهداشت دوشش است.</li></ul><div class='box'>علائم هشدار: بی‌اشتهایی، گوشه‌گیری، تب، اسهال، سرفه و لنگش. در صورت مشاهده، دام را جدا کنید و با دامپزشک مشورت کنید.</div><p>برنامهٔ واکسیناسیون باید با نظر دامپزشک و بر اساس بیماری‌های شایع هر منطقه تنظیم شود.</p>"},
+{id:"economy",cat:"اقتصاد",t:"اقتصاد پرورش بز",d:"آبان ۱۴۰۵",s:"هزینه‌ها، درآمدها و عوامل موفقیت یک واحد بزداری.",h:
+"<p>سودآوری بزداری به مدیریت خوب، انتخاب درست نژاد و کنترل هزینه‌ها بستگی دارد. بزرگ‌ترین بخش هزینه معمولاً خوراک است، بنابراین استفاده از مرتع و تولید علوفهٔ محلی اثر زیادی بر سود دارد.</p><h2>اجزای هزینه و درآمد</h2><ul><li><b>هزینه‌ها:</b> خرید دام، خوراک، دامپزشکی و دارو، نیروی کار، آغل و تجهیزات.</li><li><b>درآمدها:</b> فروش شیر و فرآورده‌ها، فروش بزغاله و دام پروار، مو و کود.</li></ul><h2>عوامل موفقیت</h2><ul><li>انتخاب دام سالم و متناسب با منطقه</li><li>ثبت اطلاعات و حسابداری دقیق</li><li>کاهش تلفات بزغاله‌ها</li><li>بازاریابی و فرآوری محصول (مثلاً پنیر) برای افزایش ارزش افزوده</li></ul><div class='box'>برای ارائهٔ دانشگاهی، می‌توانید اعداد قیمت‌ها را از منابع رسمی روز (مانند جهاد کشاورزی) جمع‌آوری و یک تحلیل سربه‌سر اضافه کنید.</div>"},
+{id:"refs",cat:"منابع",t:"منابع و مراجع",d:"آبان ۱۴۰۵",s:"فهرست منابع علمی استفاده‌شده در وبلاگ.",h:
+`<p>شمارهٔ هر منبع در متن به‌صورت بالانویس آمده است. قبل از تحویل، مشخصات هر منبع (سال، شماره، صفحه) را در Google Scholar یا سایت ناشر بررسی کنید.</p>
+<ol class='refs'>
+<li>Devendra C, Burns M. Goat Production in the Tropics. Commonwealth Agricultural Bureaux; 1983.</li>
+<li>Dubeuf JP, Morand-Fehr P, Rubino R. Situation, changes and future of goat industry around the world. Small Ruminant Research. 2004;51(2):165-173.</li>
+<li>Silanikove N. The physiological basis of adaptation in goats to harsh environments. Small Ruminant Research. 2000;35(3):181-193.</li>
+<li>Haenlein GFW. Goat milk in human nutrition. Small Ruminant Research. 2004;51(2):155-163.</li>
+<li>Morand-Fehr P. Recent developments in goat nutrition and application: a review. Small Ruminant Research. 2005;60(1-2):25-43.</li>
+<li>National Research Council. Nutrient Requirements of Small Ruminants: Sheep, Goats, Cervids, and New World Camelids. Washington, DC: National Academies Press; 2007.</li>
+<li>Webb EC, Casey NH, Simela L. Goat meat quality. Small Ruminant Research. 2005;60(1-2):153-166.</li>
+<li>Casey NH, Van Niekerk WA. The Boer goat. I. Origin, adaptability, performance testing, reproduction and milk production. Small Ruminant Research. 1988;1(3):291-302.</li>
+<li>Kosgey IS, Baker RL, Udo HMJ, Van Arendonk JAM. Successes and failures of small ruminant breeding programmes in the tropics: a review. Small Ruminant Research. 2006;61(1):13-28.</li>
+<li>FAO. Domestic Animal Diversity Information System (DAD-IS). https://www.fao.org/dad-is</li>
+</ol>
+<div class='box'>برای افزودن منابع فارسی، مقالهٔ مجله‌های علمی-پژوهشی علوم دامی را در SID (sid.ir) و Magiran جست‌وجو کنید، مخصوصاً دربارهٔ نژادهای بومی و پروار بز. سپس شمارهٔ منبع را در متن اضافه کنید.</div>`}
+];
+var cur="all",view=document.getElementById("view"),cats=document.getElementById("cats");
+var names=["all"].concat(P.map(function(p){return p.cat}).filter(function(c,i,a){return a.indexOf(c)===i}));
+function renderCats(){cats.innerHTML="";names.forEach(function(c){var b=document.createElement("button");b.type="button";b.textContent=c==="all"?"همه":c;b.setAttribute("aria-pressed",String(c===cur));b.onclick=function(){cur=c;location.hash="home";route()};cats.appendChild(b)})}
+function route(){var id=location.hash.slice(1),p=P.filter(function(x){return x.id===id})[0];
+if(p){cats.style.display="none";view.innerHTML="<a class='back' href='#home'>← بازگشت به همهٔ نوشته‌ها</a><article><div class='meta'>"+p.cat+" · "+p.d+"</div><h1>"+p.t+"</h1>"+p.h+"</article>";window.scrollTo(0,0)}
+else{cats.style.display="flex";renderCats();var l=P.filter(function(x){return cur==="all"||x.cat===cur});view.innerHTML=l.map(function(x){return "<a class='post-item' href='#"+x.id+"'><div class='meta'>"+x.cat+" · "+x.d+"</div><h2>"+x.t+"</h2><p>"+x.s+"</p></a>"}).join("")}}
+window.addEventListener("hashchange",route);route();
+document.getElementById("tg").onclick=function(){var r=document.documentElement,d=getComputedStyle(r).getPropertyValue("--bg").trim()==="#141b16";r.setAttribute("data-theme",d?"light":"dark")};
+</script>
+</body>
+</html>
